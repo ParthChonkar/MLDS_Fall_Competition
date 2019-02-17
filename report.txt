@@ -1,0 +1,25 @@
+Report:
+
+ I split up the work into feature selection, models,  training, and hyper parameter tuning. 
+
+Feature Selection:
+ - I used sklearn preprocessing to normalize my features. With similar distribution and mean they worked more smoothly in my model.
+ - I also decided to drop the mean text length and clause length because I couldn't really find a proper decision boundary between it and any of the other features. 
+
+ - So I ended up with 25 normalized features. 
+
+Models:
+
+- I created 3 models but only used 2 of them.
+- Logistic Regression: Simple logger model with sigmoid function for decision probability 
+- 1 hidden layer neural net
+- 2 hidden layer neural net
+
+Training + Hyperparams
+
+- After adjusting gradient descent momentums and learning rates and running a couple of training sessions I realized that I was overfitting the data (Was basically getting 100% on training data but 89% on the actual test data). 
+- What was weird was that I actually shuffled my data and split it into validation and training data. I did really well on validation but still got around 90 on my actual test submission. 
+
+
+Wrap Up:
+Used sklearn and pytorch and used logistic regression model for submission 
